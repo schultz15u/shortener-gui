@@ -15,7 +15,7 @@ export class DataRetrieverService {
   }
 
   getAll(): Observable<any>{
-    return this.http.get('http://cnt.wkil.pw/s/entry/list').map(data => data['entries']);
+    return this.http.get('assets/sample.json').map(data => data['entries']);
   }
 
   addNew(url: string, shortName: string) {
