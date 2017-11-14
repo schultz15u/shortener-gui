@@ -4,6 +4,7 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/mergeMap';
 import {Observable} from 'rxjs/Observable';
+import {of} from "rxjs/observable/of";
 
 @Injectable()
 export class DataRetrieverService {
@@ -19,6 +20,7 @@ export class DataRetrieverService {
 
   addNew(url: string, shortName: string) {
     console.log(JSON.stringify({'host': 'cnt.wkil.pw', 'shortname': shortName, 'target': url}));
+    return of("ok");
   }
 
   getById(searchedId): Observable<any> {
